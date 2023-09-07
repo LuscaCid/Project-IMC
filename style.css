@@ -1,0 +1,151 @@
+*{/*this is a type of reset of the styles of page*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    background: #4fa17b;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.conteiner{
+    margin: auto;
+    width: fit-content;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+.card {
+    padding: 7.5rem 5.4rem 8.5rem;
+    max-width:min(35.4rem, 90%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: max-content;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: .8rem;
+    box-shadow: 0 .4rem .4rem 0 rgba(0,0,0, 0.3);
+}
+form{
+   display: flex;
+   flex-direction: column;
+   gap: 2.6rem; 
+   
+   
+}
+.input-wrapper{
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper input{
+    outline: 1px solid #739788;
+    font-size: 1.8rem;
+    padding: 1.5rem 2rem;
+    border:none;
+    background-color: #a2c4b5;
+    border-radius: .8rem;
+}
+.input-wrapper label{
+    width: max-content;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: rgb(148, 146, 143);
+}
+.input-wrapper label:hover{
+    color: rgb(37, 37, 37);
+}
+form button{
+    padding: 1.8rem 1.2rem;
+    border: none;
+    border-radius: .8rem;
+    background-color: #a2c4b5;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1.6rem;
+    transition: background 0.3s;
+}
+form button:hover{
+    background: #50806b;
+}
+form legend{
+    padding-bottom: 0.6rem;
+    font-size: 3.4rem;
+    border-bottom: 1px solid #50806b73;
+    font-weight: 700;
+    color: rgb(9, 7, 37);
+}
+.modal{
+    position: relative;
+}
+.modal-wrapper.open{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-wrapper {/*simplesmente esta eh uma div que cobre todo o document, a div que armazena o conteudo do modal esta dentro dela*/
+    position: absolute;
+    inset:0;
+    background: #0000009f;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-wrapper button{
+    margin-top: 1.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    position:absolute;
+    top: 0;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.modal button:hover{
+    transform: scale(1.2);
+}
+.alert-error{
+    position: absolute;
+    background: rgb(247, 113, 113);
+    right: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    padding: .8rem;
+    font-family:'Roboto', sans-serif ;
+    font-weight: 700;
+    font-size: 1.8rem;
+    visibility: hidden;
+    opacity: 0;
+
+    transform: translatey(-30px);
+    transition: transform .5s;
+
+}
+
+.alert-error.open{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(min-width: 43.5rem){
+    .card{
+        display: flex;
+        flex-direction: column;
+        padding:10rem 8rem;
+        justify-content: space-between;
+    }
+}
